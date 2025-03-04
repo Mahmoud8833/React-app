@@ -1,7 +1,7 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
   { ignores: ['dist'] },
@@ -28,6 +28,14 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      'max-len': ['error', {
+        code: 80, // Maximum line length
+        ignoreUrls: true, // Ignore URLs
+        ignoreStrings: true, // Ignore strings
+        ignoreTemplateLiterals: true, // Ignore template literals
+        ignoreRegExpLiterals: true, // Ignore regular expressions
+        ignoreComments: true, // Ignore comments
+      }],
     },
   },
-]
+];
